@@ -79,7 +79,7 @@ public class OrderService {
             return;
         }
 
-        // Identifier les comptes avec au moins une Order active
+        // Identifier les comptes avec au moins une Order 
         Set<Id> activeAccountIds = new Set<Id>();
         for (AggregateResult ar : [
             SELECT Contract.AccountId accId
