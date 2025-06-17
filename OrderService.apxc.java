@@ -85,7 +85,6 @@ public class OrderService {
             SELECT Contract.AccountId accId
             FROM Order
             WHERE Contract.AccountId IN :accountIds
-            AND Status != 'Annulé'
             GROUP BY Contract.AccountId
         ]) {
             activeAccountIds.add((Id) ar.get('accId'));
